@@ -1,0 +1,18 @@
+product table hasone catagory and has one client
+-code
+-bying price
+-seling price
+-catagory
+-client
+-in stock 
+-total stock
+-available size
+-available color
+
+catagory table has many product
+-catagory name
+
+client table has many product
+-name 
+-location
+-phone
