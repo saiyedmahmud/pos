@@ -16,3 +16,13 @@ client table has many product
 -name 
 -location
 -phone
+------------------------------------------------------------------
+seed the database;//problem faced while seeding data. in catagoryseeder
+----------------------------------------------------------------
+route define done for product client and catagory
+----------------------------------------------------------------
+
+
+
+
+

@@ -9,7 +9,8 @@ class Catagory extends Model
 {
     use HasFactory;
     protected $primaryKey = 'catagory_id';
-    public function getproduct(){
-        return $this->hasMany('App\Models\Product', 'product_id', 'product_id');
+
+    public function product(){
+        $this->hasMany('App\Models\Product', 'catagory_id', 'catagory_id' );
     }
 }
