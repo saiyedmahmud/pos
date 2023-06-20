@@ -20,10 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('products/', [ProductController::class, 'products'])->name('product.all');
+Route::get('product/', [ProductController::class, 'index'])->name('product.all');
 // Route::get('product/{id}', [ProductController::class, 'product'])->name('product.view');
-Route::get('product/create/', [ProductController::class, 'createproduct'])->name('product.create.view');
-Route::post('product/create/', [ProductController::class, 'createproduct'])->name('product.create');
+Route::get('/product/create', [ProductController::class, 'goToCreatePage'])->name('product.create.view');
+Route::post('product/create/', [ProductController::class, 'createProduct'])->name('product.create');
 Route::put('product/edit/{id}', [ProductController::class, 'editproduct'])->name('product.edit');
 Route::post('product/delete/{id}', [ProductController::class, 'deleteproduct'])->name('product.delete');
 

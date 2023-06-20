@@ -10,10 +10,10 @@ class product extends Model
     use HasFactory;
     protected $primaryKey = 'product_id';
     public function catagory(){
-        $this->belongsTo('App\Models\Catagory', 'catagory_id', 'catagory_id' );
+        return $this->belongsTo(Catagory::class, 'catagory_id', 'catagory_id' );
     }
     public function client(){
-        $this->belongsTo('App\Models\Client', 'client_id', 'client_id' );
+        return $this->belongsTo(Client::class, 'client_id', 'client_id' );
     }
-    
+
 }

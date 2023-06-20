@@ -1,6 +1,10 @@
 @extends('layout.main')
 @section('main')
-    
+    @if (session('product-created'))
+        <div class="alert alert-success">
+            {{ session('product-created') }}
+        </div>
+    @endif
 
     <div class="container-fluid py-4">
       <div class="row">
@@ -9,6 +13,7 @@
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                 <h6 class="text-white text-capitalize ps-3">Product table</h6>
+                  <a href="{{route("product.create.view")}}"><button class="btn btn-success">New Product</button></a>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -30,8 +35,8 @@
                   </thead>
                   <tbody>
                     @foreach ($products as $item)
-                        
-                    
+
+
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
