@@ -65,7 +65,7 @@
                         <span class="text-secondary text-xs font-weight-bold">{{$item->catagory_name}}</span>
                       </td>
                       <td class="align-middle">
-                        <p class="text-xs font-weight-bold mb-0">{{$item->}}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{$item->name}}</p>
                       </td>
                     </tr>
                     @endforeach

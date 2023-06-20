@@ -21,8 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('products/', [ProductController::class, 'products'])->name('product.all');
-Route::get('product/{id}', [ProductController::class, 'product'])->name('product.view');
-Route::post('product/', [ProductController::class, 'addproduct'])->name('product.add');
+// Route::get('product/{id}', [ProductController::class, 'product'])->name('product.view');
+Route::get('product/create/', [ProductController::class, 'createproduct'])->name('product.create.view');
+Route::post('product/create/', [ProductController::class, 'createproduct'])->name('product.create');
 Route::put('product/edit/{id}', [ProductController::class, 'editproduct'])->name('product.edit');
 Route::post('product/delete/{id}', [ProductController::class, 'deleteproduct'])->name('product.delete');
 
